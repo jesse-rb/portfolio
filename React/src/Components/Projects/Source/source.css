@@ -1,0 +1,48 @@
+.sourcecode {
+    padding-top: var(--space);
+    padding-left: var(--space-2);
+    color: var(--color-source);
+    counter-reset: l;
+}
+
+.expander img {
+    border-radius: var(--border-radius);
+    padding: var(--space);
+    background-color: var(--background-color-image);
+    max-height: 50px;
+}
+
+.sourcecode img {
+    max-width: 100%;
+    max-height: 50vh;
+}
+
+.sourcecode > pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    position: relative;
+    padding-left: 50px;
+    margin: 0;
+}
+
+.sourcecode > pre::before {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    text-align: right;
+    color: var(--color);
+    content: counter(l) "| ";
+    counter-increment: l;
+}
+
+.sourcecode > *:nth-child(even) {
+    background-color: var(--background-color-source);
+}
+.sourcecode > *:nth-child(odd) {
+    background-color: var(--background-color-source-2);
+}
+
+.sourcecode > .comment {
+    color: #a2ecff;
+}
