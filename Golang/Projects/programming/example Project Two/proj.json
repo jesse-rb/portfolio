@@ -1,5 +1,5 @@
 {
-    "KeyWords": ["prototype based", "vanilla javascript", "implements external web services", "html", "css"],
-    "Description": "Display's sunrise/sunset times and other weather information about selected New Zealand towns, using data from external web services.",
-    "DemoURL": "fakedomain.com"
+    "KeyWords": ["css", "html", "vanilla javascript"],
+    "Description": "Example project two",
+    "DemoURL": "url to visit project"
 }
