@@ -9,10 +9,21 @@
     /* box-shadow: 0px 0px 10px 5px var(--background-color); */
 }
 
-#top h1 {
+#details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
+}
+
+#details h1 {
     margin: 0;
-    padding-bottom: var(--space);
-    padding-top: var(--space);
+}
+
+#details a {
+    margin-left: var(--space);
 }
 
 #navbar {
