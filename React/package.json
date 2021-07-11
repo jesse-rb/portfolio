@@ -40,4 +40,5 @@
     "http-proxy-middleware": "^0.19.1"
   },
   "proxy": "http://localhost:8080"
+
 }
