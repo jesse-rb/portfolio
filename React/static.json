@@ -7,5 +7,6 @@
         "/api/": {
         "origin": "https://serve-jesse-portfolio.herokuapp.com"
         }
-    }
+    },
+    "https_only": true
 }
