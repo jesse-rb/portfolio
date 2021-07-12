@@ -1,0 +1,10 @@
+{
+	"ImgURLs": [
+		"/Renders/PKS1_Front.png",
+		"/Renders/PKS2_Front.png",
+		"/Reference Images/PS2Top.jpg",
+		"/Textures/PS1_UV_Layout_For_Texturing.png"
+	],
+    "KeyWords": ["blender", "3d modelling", "texturing", "lighting"],
+    "Description": "This project was for my high school digital media class"
+}
