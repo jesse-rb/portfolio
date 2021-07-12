@@ -5,8 +5,8 @@ export var ApiContext = createContext({
     api: ""
 });
 
-if ('_self' in React.createElement('div')) { // Dev mode
-    ApiContext.api = "/"
-} else { // Prod mode
+if ('_self' in React.createElement('div')) { // Prod mode
     ApiContext.api = "/api/"
+} else { // Dev mode
+    ApiContext.api = "/"
 }
