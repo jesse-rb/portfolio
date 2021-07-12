@@ -1,12 +1,9 @@
 import { createContext } from 'react';
 import React from 'react';
 
-export var ApiContext = createContext({
-    api: ""
-});
+let apiString = "/api/" // Prod mode
+// let apiString = "/" // Dev mode
 
-if ('_self' in React.createElement('div')) { // Prod mode
-    ApiContext.api = "/api/"
-} else { // Dev mode
-    ApiContext.api = "/"
-}
+export var ApiContext = createContext({
+    api: apiString
+});
