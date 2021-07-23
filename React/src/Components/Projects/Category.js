@@ -26,7 +26,7 @@ export default class Category extends Component {
                     <button className={this.hidden ? "" : "btn-expanded"} onClick={this.toggleHide} >&gt;</button>
                     <pre className="material-icons">{this.hidden ? "folder" : "folder_open"}</pre><pre>{name}</pre>
                 </div>
-                <div className={this.hidden ? "hidden" : ""}>
+                <div className={this.hidden ? "hidden projects" : "projects"}>
                     {
                         loading ?   <div id="loading">
                                         <h3>Loading projects...</h3>

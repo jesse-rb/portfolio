@@ -17,7 +17,7 @@ export default class File extends Component {
         let url = this.api + URL
         return (
             <div>
-                <div className="expander" style={{'--top': 5, '--z-index': 9}}>
+                <div className={this.hidden ? "expander" : "expander expanded"}>
                     <button className={this.hidden ? "" : "btn-expanded"} onClick={this.toggleHide} >
                         &gt;
                     </button>

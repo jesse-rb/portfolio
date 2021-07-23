@@ -1,4 +1,7 @@
 .sourcecode {
+    resize: both;
+    overflow: auto;
+    max-height: 70vh;
     padding-top: var(--space);
     padding-left: var(--space-2);
     color: var(--color-source);
@@ -31,8 +34,8 @@
     left: 0;
     width: 50px;
     text-align: right;
-    color: var(--color);
-    content: counter(l) "| ";
+    color: var(--color-source);
+    content: counter(l) " | ";
     counter-increment: l;
 }
 

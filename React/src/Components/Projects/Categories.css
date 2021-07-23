@@ -6,7 +6,11 @@
 
 .categories > .category {
     flex-wrap: wrap;
-    flex-direction: row;
+    margin-top: var(--space-2);
+    margin-left: var(--space-2);
+}
+
+.categories > .category > .projects {
     margin-top: var(--space-2);
     margin-left: var(--space-2);
 }
