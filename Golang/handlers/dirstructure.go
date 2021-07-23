@@ -21,10 +21,15 @@ type DirStructure struct {
 	sub		[]*DirStructure
 }
 
+// Category : Categories in project directory
+type Category struct {
+	Name 		string
+	Projects	[]*Project
+}
+
 // Project : projects in directory
 type Project struct {
 	Name 		string
-	Category 	string
 	Source		*SDir
 	Proj		*ProjFile
 }
@@ -78,15 +83,24 @@ func (ds *DirStructure) scanDir() {
 	}
 }
 
-func (ds *DirStructure) toProjects() ([]*Project) {
-	projects := make([]*Project, 0)
-	for _, dirProject := range ds.sub { // For each project
-		s := &SDir{Name: dirProject.name, Dirs: make([]*SDir, 0), Files: make([]*SFile, 0)}
-		project := dirProject.scanProject(&Project{Name:dirProject.name, Category: ds.name,
-			Source: s}, s)
-		projects = append(projects, project)
+func (ds *DirStructure) toProjects() ([]*Category) {
+	categories := make([]*Category, 0)
+	
+
+	for _, dirCategory := range ds.sub { // For each category
+		projects := make([]*Project, 0)
+
+		for _, dirProject := range dirCategory.sub { // For each project
+			s := &SDir{Name: dirProject.name, Dirs: make([]*SDir, 0), Files: make([]*SFile, 0)}
+			project := dirProject.scanProject(&Project{Name:dirProject.name, Source: s}, s)
+			projects = append(projects, project)
+		}
+
+		category := &Category{Name: dirCategory.name, Projects: projects}
+		categories = append(categories, category)
 	}
-	return projects
+	
+	return categories
 }
 
 func (ds *DirStructure) scanProject(p *Project, s *SDir) (*Project) {
@@ -180,7 +194,7 @@ func (ds *DirStructure) dump() {
 }
 
 func (p *Project) toString() (string) {
-	return fmt.Sprintf("\nname: %v\ncategory: %v\nsource: %v", p.Name, p.Category, p.Source)
+	return fmt.Sprintf("\nname: %v\nsource: %v", p.Name, p.Source)
 }
 
 func dump(ps []*Project) {

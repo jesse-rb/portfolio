@@ -23,8 +23,7 @@
 
 .preview img {
     border-radius: var(--border-radius);
-    padding: var(--space);
-    background-color: var(--background-color-image);
+    box-shadow: 0px 0px 10px 5px var(--background-color-3);
     max-height: 4em;
     animation-delay: var(--animation-delay);
 }
@@ -62,7 +61,7 @@
 }
 
 .project .keyword {
-    padding: var(--space);
+    padding: 5px;
     border-radius: var(--border-radius);
     float: right;
     background-color: var(--background-color-4);

@@ -11,17 +11,26 @@
 	--background-color-3:  #14161b;
 	--background-color-4: #147e11;
 	--background-color-5: #383838;
-	--background-color-image: #000000;
+	--background-color-image: #e69292;
 
 	--space: 10px;
 	--space-2: 30px;
 
 	--border-radius: 20px;
+
+	/* box-sizing: border-box; */
+	overflow-x: hidden;
+}
+
+img {
+	border-radius: var(--border-radius);
+	box-shadow: 0px 0px 10px 5px var(--background-color-3);
+	max-height: 4em;
+	animation-delay: var(--animation-delay);
 }
 
 * {
 	box-sizing: border-box;
-	/* margin: 0; */
 	padding: 0;
 }
 
@@ -63,13 +72,19 @@ button:active {
 }
 
 .expander {
-	position: sticky;
-	position: -webkit-sticky;
-	top: 6.5em;
+	z-index: 100;
 	background-color: var(--background-color-2);
 	max-width: 100%;
 	border-top-left-radius: var(--border-radius);
 	border-bottom-left-radius: var(--border-radius);
+}
+
+.expander.expanded {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 9em;
+	z-index: 50;
+	right: 0;
 }
 
 .expander > * {

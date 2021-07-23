@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import Top from './Components/Layouts/Top'
-import Projects from './Components/Projects/Projects'
+import Categories from './Components/Projects/Categories';
 
 export default class App extends Component {
 	render() {
@@ -10,7 +10,7 @@ export default class App extends Component {
 			<Router>
 				<div className="App">
 					<Top />
-						<Route exact path="/" render={props => (
+					<Route exact path="/" render={props => (
 							<div className="Section">
 								<h2>Hi! Thanks for visiting.</h2>
 								<h3>Development notes:</h3>
@@ -24,7 +24,7 @@ export default class App extends Component {
 						<Route exact path="/projects" render={props => (
 							<div className="Section">
 								<h2>Projects</h2>
-								<Projects categories={['programming', 'art']} />
+								<Categories />
 							</div>
 						)} />
 						<Route exact path="/about" render={props => (
@@ -71,7 +71,6 @@ export default class App extends Component {
 										</ul>
 									</div>
 								</div>
-
 							</div>
 						)} />
 				</div>

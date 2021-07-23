@@ -16,7 +16,7 @@ export default class Dir extends Component {
         const {Name, Dirs, Files, Images} = this.props.directory
         return (
             <div>
-                <div className="expander" style={{'--top': 5, '--z-index': 9}}>
+                <div className={this.hidden ? "expander" : "expander expanded"}>
                     <button className={this.hidden ? "" : "btn-expanded"} onClick={this.toggleHide} >&gt;</button>
                     <pre className="material-icons">{this.hidden ? "folder" : "folder_open"}</pre><pre>{Name}</pre>
                 </div>

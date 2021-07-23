@@ -14,15 +14,12 @@ func main() {
 	l := log.New(os.Stdout, "main => ", log.LstdFlags)
 	lhandlers := log.New(os.Stdout, "handlers => ", log.LstdFlags)
 	// Create handlers
-	artProjects := handlers.NewDirStructure(lhandlers, "./Projects/art")
-	programmingProjects := handlers.NewDirStructure(lhandlers, "./Projects/programming")
+	projects := handlers.NewDirStructure(lhandlers, "./Projects")
 
 	// Create new serve mux
 	sm := http.NewServeMux()
 	// Register handlers
-	sm.Handle("/get-art-projects", artProjects)
-	sm.Handle("/get-programming-projects", programmingProjects)
-	// sm.Handle("/", http.FileServer(http.Dir("./Projects")))
+	sm.Handle("/get-projects", projects)
 	sm.Handle("/Projects/", http.StripPrefix("/Projects/" ,http.FileServer(http.Dir("./Projects"))))
 
 	// Grab standard port
