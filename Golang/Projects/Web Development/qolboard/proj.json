@@ -1,5 +1,5 @@
 {
-    "KeyWords": ["under development", "web sockets", "asynchronous", "prototype based", "vanilla javascript", "golang", "html", "css"],
+    "KeyWords": ["2020-present", "web sockets", "asynchronous", "prototype based", "vanilla javascript", "golang", "html", "css"],
     "Description": "This is a drawing web app that allows you to draw solo or collaborate with others by sharing your room code. I've been fascinated with how software such as online multiplayer games sync information between clients, so I set out to create a 'whiteboard' like web app which could be used for convenience, and could sync drawings across anyone who joined your room. This project has been a great learning experience to get to know how to use web sockets to sync information (i.e. drawings and canvas settings) between multiple clients who join the same 'room'.",
     "DemoURL": "https://qolboard.herokuapp.com"
 }
