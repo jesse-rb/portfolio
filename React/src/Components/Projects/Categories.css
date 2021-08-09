@@ -22,16 +22,14 @@
 }
 
 .categories #loading {
-    width: 50%;
-    margin: auto;
-    margin: var(--space-2);
+    display: grid;
+    place-content: center;
 }
 
 .categories #loading-shape {
-    animation: loading 2s ease-in-out infinite;
-    border-radius: var(--border-radius);
-    border: var(--background-color-4) 5px solid;
-    background-color: var(--background-color);
+    animation: loading 5s ease-in-out infinite;
+    border-radius: 50%;
+    background-color: var(--background-color-3);
     width: 3em;
     height: 3em;
     display: flex;
@@ -43,11 +41,19 @@
     font-size: xx-large;
 }
 
-@keyframes loading {
-    50% {
-        border-radius: 50%;
-    }
+.categories #loading-shape .material-icons {
+    /* transform: rotateY(180deg); */
+    animation: loading-icon 2s ease-in-out infinite;
+}
+
+@keyframes loading-icon {
     100% {
-        transform: rotate3d(0, 0, 1, 360deg);
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
+
+@keyframes loading {
+    100% {
+        transform: rotate3d(1, 1, 1, 360deg);
     }
 }

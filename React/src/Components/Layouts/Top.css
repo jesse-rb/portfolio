@@ -31,20 +31,28 @@
     display: flex;
     flex-wrap: wrap;
     min-width: 100%;
-    flex-grow: 3;
 }
 
 #navbar > div {
     flex-grow: 3;
-    border: 1px var(--color) solid;
+    flex-basis: 200px;
     padding: 0;
-    transition-duration: 1000ms;
+    transition-duration: 0.2s;
+    filter: saturate(150%);
+}
+
+#navbar > #goto-page-1 {
+    background-color: var(--b);
+}
+#navbar > #goto-page-2 {
+    background-color: var(--r);
+}
+#navbar > #goto-page-3 {
+    background-color: var(--g);
 }
 
 #navbar > div:hover {
-    z-index: 10000;
-    border-top-right-radius: 20px;
-    flex-grow: 4;
+    filter: drop-shadow(0 2px 8px var(--background-color)) invert(0.1) sepia(10%);
 }
 
 #navbar a {

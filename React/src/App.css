@@ -5,7 +5,6 @@
 	--background-color-source: #292929;
 	--background-color-source-2: #272727;
 
-
 	--background-color: #28092e;
 	--background-color-2:  #252525;
 	--background-color-3:  #14161b;
@@ -13,6 +12,11 @@
 	--background-color-5: #383838;
 	--background-color-image: #e69292;
 
+	--b: #2d2d3d;
+    --g: #2d3d2d;
+    --r: #3d2d2d;
+
+	--space--1: 5px;
 	--space: 10px;
 	--space-2: 30px;
 
@@ -39,8 +43,8 @@ body {
 	font-size: large;
 	line-height: 1.4;
 	color: var(--color);
-	background-color: var(--background-color-2);
 	margin: 0;
+	background-color: var(--background-color-2);
 }
 
 button {
@@ -74,10 +78,10 @@ button:active {
 
 .expander {
 	z-index: 100;
-	background-color: var(--background-color-2);
+	background: linear-gradient(90deg, var(--r), var(--g), var(--b));
 	max-width: 100%;
-	border-top-left-radius: var(--border-radius);
-	border-bottom-left-radius: var(--border-radius);
+	border-radius: 5px;
+	margin-bottom: 5px;
 }
 
 .expander.expanded {
@@ -102,7 +106,7 @@ a {
 }
 
 .material-icons {
-	margin-right: var(--space);
+	margin-right: var(--space--1);
 	vertical-align: middle;
 }
 
