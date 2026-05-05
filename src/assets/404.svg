@@ -1,0 +1,32 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#fffbf0" rx="12"/>
+
+  <!-- wobbly underline squiggle -->
+  <path d="M100 260 Q130 255 160 260 Q190 265 220 260 Q250 255 280 260 Q310 265 340 260" fill="none" stroke="#ffb347" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- tilted 4 -->
+  <text x="88" y="230" font-family="monospace" font-size="120" font-weight="bold" fill="#222" transform="rotate(-6 88 230)">4</text>
+
+  <!-- big 0 with a face -->
+  <text x="200" y="235" text-anchor="middle" font-family="monospace" font-size="120" font-weight="bold" fill="#222">0</text>
+  <!-- eyes inside the 0 -->
+  <circle cx="183" cy="195" r="6" fill="#fffbf0"/>
+  <circle cx="217" cy="195" r="6" fill="#fffbf0"/>
+  <circle cx="185" cy="196" r="3" fill="#222"/>
+  <circle cx="219" cy="196" r="3" fill="#222"/>
+  <!-- tiny sweat drop -->
+  <ellipse cx="228" cy="182" rx="4" ry="6" fill="#a8d8f0" opacity="0.85"/>
+  <ellipse cx="228" cy="178" rx="2.5" ry="2" fill="#a8d8f0" opacity="0.6"/>
+
+  <!-- tilted second 4 -->
+  <text x="312" y="228" font-family="monospace" font-size="120" font-weight="bold" fill="#222" transform="rotate(5 312 228)">4</text>
+
+  <!-- subtitle -->
+  <text x="200" y="308" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#888">uh oh. nothing here.</text>
+
+  <!-- little stars -->
+  <text x="58" y="140" font-size="22" fill="#ffb347">?</text>
+  <text x="330" y="120" font-size="14" fill="#ffb347">?</text>
+  <text x="348" y="300" font-size="10" fill="#ffb347">?</text>
+  <text x="40" y="310" font-size="12" fill="#ffb347">?</text>
+</svg>
