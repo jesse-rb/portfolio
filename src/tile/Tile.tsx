@@ -64,12 +64,12 @@ function Tile(props: {
         const target = e.currentTarget;
 
         const width = target.offsetWidth;
-        const left = target.offsetLeft;
+        const left = target.offsetLeft - document.documentElement.scrollLeft;
         const xRelativeToCentre = left + width / 2 - e.clientX;
         const x = (xRelativeToCentre / (width / 2)) * 25;
 
         const height = target.offsetHeight;
-        const top = target.offsetTop;
+        const top = target.offsetTop - document.documentElement.scrollTop;
         const yRelativeToCentre = e.clientY - (top + height / 2);
         const y = (yRelativeToCentre / (height / 2)) * 25;
 
