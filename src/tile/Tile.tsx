@@ -4,7 +4,8 @@ function Tile(props: {
     title: string;
     headlines: Array<string>;
     src: string;
-    logo: string;
+    logo?: string;
+    href?: string;
 }) {
     const [transformOrigin, setTransformOrigin] = useState(
         calcTransformOrigin(0, 0),
@@ -45,13 +46,13 @@ function Tile(props: {
     // Jitter loop
     useEffect(() => {
         const now = performance.now();
-        const lu = now - 175;
+        const lu = now - 9999;
         let raf: number;
         const loop = () => {
             if (now - lu >= 175) {
                 setPoint((prev) => ({
-                    x: prev.x + (Math.random() - 0.5) * 2 * 0.2,
-                    y: prev.y + (Math.random() - 0.5) * 2 * 0.2,
+                    x: prev.x + (Math.random() - 0.5) * 2 * 0.5,
+                    y: prev.y + (Math.random() - 0.5) * 2 * 0.5,
                 }));
             }
             raf = requestAnimationFrame(loop);
@@ -60,7 +61,7 @@ function Tile(props: {
         return () => cancelAnimationFrame(raf);
     });
 
-    function handleImgMouseMove(e: MouseEvent<HTMLImageElement>) {
+    function handleImgMouseMove(e: MouseEvent<HTMLAnchorElement>) {
         const target = e.currentTarget;
 
         const width = target.offsetWidth;
@@ -96,7 +97,10 @@ function Tile(props: {
     return (
         <>
             <div className="rounded-md max-w-96 gap-4 flex flex-col">
-                <div
+                <a
+                    rel="noopener noreferer"
+                    target="_blank"
+                    href={props.href}
                     className="flex w-full h-fit rounded-md overflow-clip inset-shadow-sm"
                     style={{
                         background: `radial-gradient(circle at ${smoothEdge.x}% ${smoothEdge.y}%, #F2C4A0 -50%, transparent 100%)`,
@@ -105,7 +109,7 @@ function Tile(props: {
                 >
                     <div className="h-10/12 m-auto">
                         <img
-                            className={`${transformOrigin} h-full rounded-md duration-150`}
+                            className={`${transformOrigin} h-full rounded-md duration-175`}
                             src={props.src}
                             style={{
                                 transform: `rotateX(${point.y}deg) rotateY(${point.x}deg)`,
@@ -113,13 +117,16 @@ function Tile(props: {
                             }}
                         ></img>
                     </div>
-                </div>
+                </a>
                 <div className="px-4 pb-4 flex flex-col gap-2 h-full">
                     {props.headlines.length > 1 ? (
                         <ul className="flex flex-col gap-2">
                             {props.headlines.map((headline) => {
                                 return (
-                                    <li className="leading-none border-l border-l-gray-400 pl-2">
+                                    <li
+                                        key={headline}
+                                        className="leading-none border-l border-l-gray-400 pl-2"
+                                    >
                                         {headline}
                                     </li>
                                 );
@@ -131,7 +138,14 @@ function Tile(props: {
                         </p>
                     )}
                     <p className="mt-auto flex gap-2 items-center">
-                        <img className="h-5 rounded-sm" src={props.logo}></img>
+                        {props.logo ? (
+                            <img
+                                className="h-5 rounded-sm"
+                                src={props.logo}
+                            ></img>
+                        ) : (
+                            <></>
+                        )}
                         {props.title}
                     </p>
                 </div>
