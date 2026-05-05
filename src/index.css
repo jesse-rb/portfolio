@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+    --text: #fff;
+    --bg: #202430;
+    --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+
+    font: 18px/145% var(--sans);
+    letter-spacing: 0.18px;
+    background: var(--bg);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+    width: 1126px;
+    max-width: 100%;
+    margin: 0 auto;
+    border-inline: 1px solid var(--border);
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 2rem 0 2rem;
+}
+
+body {
+    color: var(--text);
+    margin: 0;
+}
+
+h1,
+h2 {
+    font-weight: 500;
+}
+
+h1 {
+    letter-spacing: -1.68px;
+    margin: 32px 0;
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 118%;
+    letter-spacing: -0.24px;
+    margin: 0 0 8px;
+}
+
+ul {
+    list-style: none;
+}
