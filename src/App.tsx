@@ -21,7 +21,7 @@ function App() {
                 <Tile
                     headlines={["Backend Engineer"]}
                     title="Basis"
-                    src={Asset404}
+                    src={AssetBasis}
                     logo={AssetBasisLogo}
                     href={"https://wearebasis.com"}
                 />
