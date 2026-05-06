@@ -47,7 +47,6 @@ function Tile(props: {
     useEffect(() => {
         const now = performance.now();
         const lu = now - 9999;
-        let raf: number;
         const loop = () => {
             if (now - lu >= 175) {
                 setPoint((prev) => ({
@@ -55,9 +54,8 @@ function Tile(props: {
                     y: prev.y + (Math.random() - 0.5) * 2 * 0.5,
                 }));
             }
-            raf = requestAnimationFrame(loop);
         };
-        raf = requestAnimationFrame(loop);
+        const raf = requestAnimationFrame(loop);
         return () => cancelAnimationFrame(raf);
     });
 
