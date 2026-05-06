@@ -1,0 +1,9 @@
+# Generally allow robots
+User-agent: *
+Allow: /
+
+# Request opt out of a few robots
+User-agent: Googlebot-Image
+Disallow: /
+User-agent: msnbot-media
+Disallow: /
