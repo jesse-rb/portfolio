@@ -7,7 +7,6 @@ import AssetBasisLogo from "./assets/basis.logo.png";
 import AssetQolboard from "./assets/qolboard.png";
 import AssetSprayPlan from "./assets/sprayplan.png";
 import AssetHortPlusLogo from "./assets/hortplus.logo.png";
-import Asset404 from "./assets/404.svg";
 
 function App() {
     return (
