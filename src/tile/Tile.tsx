@@ -11,9 +11,11 @@ function Tile(props: {
         calcTransformOrigin(0, 0),
     );
 
-    const [point, setPoint] = useState({
-        x: Math.floor(Math.random() * 50) - 25,
-        y: Math.floor(Math.random() * 50) - 25,
+    const [point, setPoint] = useState(() => {
+        return {
+            x: Math.floor(Math.random() * 50) - 25,
+            y: Math.floor(Math.random() * 50) - 25,
+        };
     }); // Point percentage relative to center
 
     const edgePoint = useMemo(() => {
