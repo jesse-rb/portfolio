@@ -118,7 +118,7 @@ function Tile(props: {
                         ></img>
                     </div>
                 </a>
-                <div className="px-4 pb-4 flex flex-col gap-2 h-full">
+                <div className="px-4 flex flex-col gap-2 h-fit mt-auto">
                     {props.headlines.length > 1 ? (
                         <ul className="flex flex-col gap-2">
                             {props.headlines.map((headline) => {
@@ -137,7 +137,7 @@ function Tile(props: {
                             {props.headlines[0]}
                         </p>
                     )}
-                    <p className="mt-auto flex gap-2 items-center">
+                    <p className="flex gap-2 items-center font-bold">
                         {props.logo ? (
                             <img
                                 className="h-5 rounded-sm"
