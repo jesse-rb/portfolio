@@ -16,7 +16,7 @@ function App() {
             </div>
 
             <h2>Past Work Experience</h2>
-            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            <div className="grid gap-8 grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
                 <Tile
                     headlines={["Backend Engineer"]}
                     title="Basis"
@@ -37,7 +37,7 @@ function App() {
             </div>
 
             <h2>Projects</h2>
-            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            <div className="grid gap-8 grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
                 <Tile
                     headlines={["qolboard"]}
                     title="Personal Project"

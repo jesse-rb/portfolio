@@ -94,7 +94,7 @@ function Tile(props: {
 
     return (
         <>
-            <div className="rounded-md max-w-96 gap-4 flex flex-col">
+            <div className="rounded-md gap-4 flex flex-col">
                 <a
                     rel="noopener noreferer"
                     target="_blank"
