@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type MouseEvent } from "react";
+import Anchor from "../anchor/Anchor";
 
 function Tile(props: {
     title: string;
@@ -61,7 +62,7 @@ function Tile(props: {
         return () => cancelAnimationFrame(raf);
     });
 
-    function handleImgMouseMove(e: MouseEvent<HTMLAnchorElement>) {
+    function handleImgMouseMove(e: MouseEvent<HTMLDivElement>) {
         const target = e.currentTarget;
 
         const width = target.offsetWidth;
@@ -97,9 +98,7 @@ function Tile(props: {
     return (
         <>
             <div className="rounded-md gap-4 flex flex-col">
-                <a
-                    rel="noopener noreferer"
-                    target="_blank"
+                <div
                     href={props.href}
                     className="flex w-full h-fit rounded-md overflow-clip inset-shadow-sm"
                     style={{
@@ -117,7 +116,7 @@ function Tile(props: {
                             }}
                         ></img>
                     </div>
-                </a>
+                </div>
                 <div className="px-4 flex flex-col gap-2 h-fit mt-auto">
                     {props.headlines.length > 1 ? (
                         <ul className="flex flex-col gap-2">
@@ -146,7 +145,17 @@ function Tile(props: {
                         ) : (
                             <></>
                         )}
-                        {props.title}
+                        {props.href ? (
+                            <Anchor
+                                rel="noopener noreferer"
+                                target="_blank"
+                                href={props.href}
+                            >
+                                <>{props.title}</>
+                            </Anchor>
+                        ) : (
+                            <>{props.title}</>
+                        )}
                     </p>
                 </div>
             </div>

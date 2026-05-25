@@ -8,6 +8,7 @@ import AssetQolboard from "./assets/qolboard.png";
 import AssetQolboardLogo from "./assets/qolboard.logo.svg";
 import AssetSprayPlan from "./assets/sprayplan.png";
 import AssetHortPlusLogo from "./assets/hortplus.logo.png";
+import Anchor from "./anchor/Anchor";
 
 function App() {
     return (
@@ -15,23 +16,23 @@ function App() {
             <div className="flex flex-col gap-8">
                 <div className="text-center">
                     <h1 className="mb-4">Jesse Reyneke-Barnard</h1>
-                    <span className="flex gap-2 justify-center text-xl">
-                        {/* <span>Find me @</span> */}
-                        <a
-                            rel="noopener noreferer"
-                            target="_blank"
+                    <div className="flex gap-2 justify-center">
+                        <span>Find me @</span>
+                        <Anchor
+                            rel={"noopener noreferer"}
+                            target={"_blank"}
                             href="https://github.com/jesse-rb"
                         >
-                            GitHub
-                        </a>
-                        <a
+                            <>GitHub</>
+                        </Anchor>
+                        <Anchor
                             rel="noopener noreferer"
                             target="_blank"
                             href="https://www.linkedin.com/in/jesse-reyneke-barnard"
                         >
-                            LinkedIn
-                        </a>
-                    </span>
+                            <>LinkedIn</>
+                        </Anchor>
+                    </div>
                 </div>
 
                 <div className="flex flex-col gap-4 min-w-[250px]">
