@@ -99,7 +99,6 @@ function Tile(props: {
         <>
             <div className="rounded-md gap-4 flex flex-col">
                 <div
-                    href={props.href}
                     className="flex w-full h-fit rounded-md overflow-clip inset-shadow-sm"
                     style={{
                         background: `radial-gradient(circle at ${smoothEdge.x}% ${smoothEdge.y}%, #F2C4A0 -50%, transparent 100%)`,
