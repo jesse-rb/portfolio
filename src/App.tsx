@@ -1,13 +1,8 @@
 import "./App.css";
 import Tile from "./tile/Tile";
-import AssetEnrolmy from "./assets/enrolmy.png";
-import AssetBasis from "./assets/basis.png";
-import AssetEnrolmyLogo from "./assets/enrolmy.logo.png";
-import AssetBasisLogo from "./assets/basis.logo.png";
+import AssetNotFound from "./assets/404.svg"
 import AssetQolboard from "./assets/qolboard.png";
 import AssetQolboardLogo from "./assets/qolboard.logo.svg";
-import AssetSprayPlan from "./assets/sprayplan.png";
-import AssetHortPlusLogo from "./assets/hortplus.logo.png";
 import Anchor from "./anchor/Anchor";
 
 function App() {
@@ -59,8 +54,8 @@ function App() {
                         <Tile
                             headlines={["Backend Engineer"]}
                             title="Basis"
-                            src={AssetBasis}
-                            logo={AssetBasisLogo}
+                            src={AssetNotFound}
+                            logo={AssetNotFound}
                             href={"https://wearebasis.com"}
                         />
                         <Tile
@@ -69,8 +64,8 @@ function App() {
                                 "Intern Software Developer",
                             ]}
                             title="Enrolmy Software"
-                            src={AssetEnrolmy}
-                            logo={AssetEnrolmyLogo}
+                            src={AssetNotFound}
+                            logo={AssetNotFound}
                             href={"https://enrolmy.com"}
                         />
                         <Tile
@@ -83,8 +78,8 @@ function App() {
                         <Tile
                             headlines={["Backend Developer"]}
                             title="Spray Plan Manager - Hort Plus"
-                            src={AssetSprayPlan}
-                            logo={AssetHortPlusLogo}
+                            src={AssetNotFound}
+                            logo={AssetNotFound}
                             href="https://sprayplan.nz"
                         />
                     </div>
