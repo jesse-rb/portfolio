@@ -48,19 +48,21 @@ function Tile(props: {
 
     // Jitter loop
     useEffect(() => {
-        const now = performance.now();
-        const lu = now - 9999;
-        const loop = () => {
-            if (now - lu >= 175) {
+        let last: DOMHighResTimeStamp = 0
+        let raf: number
+        const loop = (t: DOMHighResTimeStamp) => {
+            if (t - last >= 175) {
+                last = t
                 setPoint((prev) => ({
-                    x: prev.x + (Math.random() - 0.5) * 2 * 0.5,
-                    y: prev.y + (Math.random() - 0.5) * 2 * 0.5,
+                    x: prev.x + (Math.random() - 0.5) * 4,
+                    y: prev.y + (Math.random() - 0.5) * 4,
                 }));
             }
+            raf = requestAnimationFrame(loop);
         };
-        const raf = requestAnimationFrame(loop);
+        raf = requestAnimationFrame(loop);
         return () => cancelAnimationFrame(raf);
-    });
+    }, []);
 
     function handleImgMouseMove(e: MouseEvent<HTMLDivElement>) {
         const target = e.currentTarget;

@@ -6,12 +6,12 @@ function Anchor(props: {
 }) {
     return (
         <>
-            <div className="anchor-component">
+            <span className="anchor-component">
                 <a href={props.href} target={props.target} rel={props.rel}>
                     {props.children}
                 </a>
-                <div className="underline pointer-events-none"></div>
-            </div>
+                <span className="underline pointer-events-none"></span>
+            </span>
         </>
     );
 }

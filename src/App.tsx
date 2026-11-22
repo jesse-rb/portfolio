@@ -33,8 +33,8 @@ function App() {
                 <div className="flex flex-col gap-4 min-w-[250px]">
                     <h2>About me</h2>
                     <p>
-                        &#128187; I am a full stack software engineer with over
-                        4 years of experience building scalable web applications
+                        &#128187; I am a full stack Software Engineer with over
+                        5 years of experience building scalable web applications
                         who thrives in collaborative environments. Experienced
                         in designing reliable APIs, optimizing legacy systems,
                         and delivering intuitive frontend clients. Passionate
@@ -51,6 +51,13 @@ function App() {
                 <div className="flex flex-col gap-4">
                     <h2>Work experience &amp; projects</h2>
                     <div className="grid gap-4 grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
+                        <Tile
+                            headlines={["Software Engineer"]}
+                            title="CoachMate"
+                            src={AssetNotFound}
+                            logo={AssetNotFound}
+                            href={"https://coachmate.sport"}
+                        />
                         <Tile
                             headlines={["Backend Engineer"]}
                             title="Basis"
